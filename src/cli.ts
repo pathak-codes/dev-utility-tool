@@ -8,8 +8,8 @@ function readInput(args: string[]): string {
   if (fileArg) {
     if (!existsSync(fileArg)) {
       console.error(`error: file not found: ${fileArg}`);
-      process.exitCode = 1;
-      return "";
+      // Skip printing stats for a failed read; exit with the error code immediately.
+      process.exit(1);
     }
     return readFileSync(fileArg, "utf8");
   }
