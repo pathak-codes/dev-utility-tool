@@ -1,0 +1,26 @@
+{
+  "name": "dev-utility-tool",
+  "version": "0.1.0",
+  "description": "A lightweight CLI toolkit that computes quick text statistics on files or stdin.",
+  "main": "dist/cli.js",
+  "bin": {
+    "devstats": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test \"dist/**/*.test.js\"",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "cli",
+    "text",
+    "statistics",
+    "utility"
+  ],
+  "author": "pathak-codes",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.7.0"
+  }
+}
